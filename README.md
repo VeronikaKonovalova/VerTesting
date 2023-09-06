@@ -6,3 +6,5 @@
 - Системы управления базами данных: ``PostgreSQL``.
 - Инструменты тестрировщика API: ``CURL``, ``Postman``, ``DevTools``.
 - Уровень знания английского языка: B1-B2.
+## Проекты
+- [Курсовая № 1](https://github.com/VeronikaKonovalova/VerTesting/blob/main/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%821/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%2C%201%20%D0%B8%202%20%D0%BA%D1%83%D1%80%D1%81.pdf)
