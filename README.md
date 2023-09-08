@@ -5,7 +5,7 @@
 ## Навыки.
 - Системы управления базами данных: ``PostgreSQL``.
 - Инструменты тестрировщика API: ``CURL``, ``Postman``, ``DevTools``.
-- Другое: ``Jira``, ``qase.io``,``Swagger``,``Trello``, ``SoapUI``, ``Charles``.
+- Другое: ``Jira``,``Confluence``, ``qase.io``,``Swagger``,``Trello``, ``SoapUI``, ``Charles``.
   
 - Уровень знания английского языка: B1-B2.
 ## Проекты
