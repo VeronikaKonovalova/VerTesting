@@ -1,1 +1,459 @@
+Запрос № 1.
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:spel="http://speller.yandex.net/services/spellservice">
+   <soap:Header/>
+   <soap:Body>
+      <spel:CheckTextsRequest lang="ru" options="0" format="">
+         <!--Zero or more repetitions:-->
+         <spel:text>Беловежская пуща
+
+    На дисятки киламетров тянитца пущя. Густые леса сменяются полями балотами лугами. В пуще встретеш различные виды звирей и птиц. И среди них знаменитый беловежский зубр.
+
+    В пуще много видов деревев. Идёш солнечным сосновым бором. Воздух пахнет сасновой и еловой хвоей*. Вдрук среди мрачных елей  милькает белая берёска. А вот круглая поляна. От солнца, цветов и бабочек поляна кажется яркой и весёлой.
+
+   В рощи растут старые дубы. Есть гиганские сосны и ели и берёзы и клёны. Ходешь среди них и любуешься этими велеканами. Серце наполняится гордостью  за  родную природу</spel:text>
+      </spel:CheckTextsRequest>
+   </soap:Body>
+</soap:Envelope>
+
+
+Ответ № 1.
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <CheckTextsResponse xmlns="http://speller.yandex.net/services/spellservice">
+         <ArrayOfSpellResult>
+            <SpellResult>
+               <error code="1" pos="25" row="2" col="7" len="7">
+                  <word>дисятки</word>
+                  <s>десятки</s>
+               </error>
+               <error code="1" pos="33" row="2" col="15" len="10">
+                  <word>киламетров</word>
+                  <s>километров</s>
+               </error>
+               <error code="1" pos="44" row="2" col="26" len="7">
+                  <word>тянитца</word>
+               </error>
+               <error code="1" pos="52" row="2" col="34" len="4">
+                  <word>пущя</word>
+                  <s>пуща</s>
+               </error>
+               <error code="1" pos="87" row="2" col="69" len="8">
+                  <word>балотами</word>
+                  <s>болотами</s>
+               </error>
+               <error code="1" pos="111" row="2" col="93" len="8">
+                  <word>встретеш</word>
+                  <s>встретишь</s>
+               </error>
+               <error code="1" pos="136" row="2" col="118" len="6">
+                  <word>звирей</word>
+                  <s>зверей</s>
+               </error>
+               <error code="1" pos="216" row="4" col="23" len="7">
+                  <word>деревев</word>
+                  <s>деревьев</s>
+               </error>
+               <error code="1" pos="225" row="4" col="32" len="4">
+                  <word>Идёш</word>
+                  <s>Идешь</s>
+                  <s>Идиш</s>
+                  <s>Едешь</s>
+               </error>
+               <error code="1" pos="270" row="4" col="77" len="8">
+                  <word>сасновой</word>
+                  <s>сосновой</s>
+               </error>
+               <error code="1" pos="296" row="4" col="103" len="5">
+                  <word>Вдрук</word>
+                  <s>Вдруг</s>
+               </error>
+               <error code="1" pos="322" row="4" col="129" len="8">
+                  <word>милькает</word>
+                  <s>мелькает</s>
+               </error>
+               <error code="1" pos="337" row="4" col="144" len="7">
+                  <word>берёска</word>
+                  <s>березка</s>
+               </error>
+               <error code="1" pos="464" row="6" col="35" len="9">
+                  <word>гиганские</word>
+                  <s>гигантские</s>
+               </error>
+               <error code="1" pos="504" row="6" col="75" len="6">
+                  <word>Ходешь</word>
+                  <s>Ходишь</s>
+               </error>
+               <error code="1" pos="539" row="6" col="110" len="10">
+                  <word>велеканами</word>
+                  <s>великанами</s>
+               </error>
+               <error code="1" pos="551" row="6" col="122" len="5">
+                  <word>Серце</word>
+                  <s>Сердце</s>
+               </error>
+               <error code="1" pos="557" row="6" col="128" len="11">
+                  <word>наполняится</word>
+                  <s>наполняется</s>
+               </error>
+            </SpellResult>
+         </ArrayOfSpellResult>
+      </CheckTextsResponse>
+   </soap:Body>
+</soap:Envelope>
+
+
+Запрос № 2.
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:spel="http://speller.yandex.net/services/spellservice">
+   <soap:Header/>
+   <soap:Body>
+      <spel:CheckTextsRequest lang="ru" options="0" format="">
+         <!--Zero or more repetitions:-->
+         <spel:text>Краски осени
+
+      Харашо паработала осень, разукрасила всё вокрук. Под каждым деревом лежат и жёлтые и багровые и бурые листя. Солнце негреет  но светит очень ярко. В его лучах разнацветными  алмазами блистят** дождевые капли. Какая красота?
+
+Понебу медлено плывут белые облока. Воздух свеж и прозрачен. На краю леса в золотом убори стоят клёны. Издалека виден куст дикой смородины. Он оделся не в жолтый, а в красный нарят. С удовольствием смотреш  на краски ранней осени!</spel:text>
+      </spel:CheckTextsRequest>
+   </soap:Body>
+</soap:Envelope>
+ 
+Ответ № 2.
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <CheckTextsResponse xmlns="http://speller.yandex.net/services/spellservice">
+         <ArrayOfSpellResult>
+            <SpellResult>
+               <error code="1" pos="20" row="2" col="6" len="6">
+                  <word>Харашо</word>
+                  <s>Хорошо</s>
+               </error>
+               <error code="1" pos="27" row="2" col="13" len="10">
+                  <word>паработала</word>
+                  <s>поработала</s>
+               </error>
+               <error code="1" pos="61" row="2" col="47" len="6">
+                  <word>вокрук</word>
+                  <s>вокруг</s>
+               </error>
+               <error code="1" pos="122" row="2" col="108" len="5">
+                  <word>листя</word>
+                  <s>листья</s>
+               </error>
+               <error code="1" pos="136" row="2" col="122" len="7">
+                  <word>негреет</word>
+                  <s>не греет</s>
+               </error>
+               <error code="1" pos="179" row="2" col="165" len="13">
+                  <word>разнацветными</word>
+                  <s>разноцветными</s>
+               </error>
+               <error code="1" pos="203" row="2" col="189" len="7">
+                  <word>блистят</word>
+                  <s>блестят</s>
+               </error>
+               <error code="1" pos="245" row="4" col="0" len="6">
+                  <word>Понебу</word>
+                  <s>По небу</s>
+               </error>
+               <error code="1" pos="252" row="4" col="7" len="7">
+                  <word>медлено</word>
+                  <s>медленно</s>
+               </error>
+               <error code="1" pos="275" row="4" col="30" len="6">
+                  <word>облока</word>
+                  <s>облака</s>
+               </error>
+               <error code="1" pos="331" row="4" col="86" len="5">
+                  <word>убори</word>
+                  <s>уборе</s>
+               </error>
+               <error code="1" pos="404" row="4" col="159" len="6">
+                  <word>жолтый</word>
+                  <s>желтый</s>
+               </error>
+               <error code="1" pos="424" row="4" col="179" len="5">
+                  <word>нарят</word>
+                  <s>наряд</s>
+               </error>
+               <error code="1" pos="447" row="4" col="202" len="7">
+                  <word>смотреш</word>
+                  <s>смотришь</s>
+                  <s>смотре</s>
+               </error>
+            </SpellResult>
+         </ArrayOfSpellResult>
+      </CheckTextsResponse>
+   </soap:Body>
+</soap:Envelope>
+
+Запрос № 3.
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:spel="http://speller.yandex.net/services/spellservice">
+   <soap:Header/>
+   <soap:Body>
+      <spel:CheckTextsRequest lang="ru" options="0" format="">
+         <!--Zero or more repetitions:-->
+         <spel:text>На рыбалке
+
+  Сонце уже садилось. Мы с дядий*  тронулись в путь. Дарога к реке*  шла через рошь*. Всё в пути*  меня занимаит. Вот пробегаит  мыш. Где – то слышется**  плачь  птици*.  Так паёт сыч.
+
+   Вечир. Близица**  ночь. Кругом стоит**  полная тиш. Только неунимаится дергач  а камыш ведёт тихую биседу с рекой.
+
+   Начинаем удить. Сразу же попадается ёрш. Смотрю, а у дяди бьётся на лески огромный лещ. Про мелоч*  и гаварить**  не приходится. Она попадается каждую минуту. Незаметно приходит полночь. Мы* уходим**  в шалаш* и там праводим остаток ночи.
+
+                                               !</spel:text>
+      </spel:CheckTextsRequest>
+   </soap:Body>
+</soap:Envelope>
+
+Ответ № 3.
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <CheckTextsResponse xmlns="http://speller.yandex.net/services/spellservice">
+         <ArrayOfSpellResult>
+            <SpellResult>
+               <error code="1" pos="14" row="2" col="2" len="5">
+                  <word>Сонце</word>
+                  <s>Солнце</s>
+               </error>
+               <error code="1" pos="39" row="2" col="27" len="5">
+                  <word>дядий</word>
+                  <s>дядей</s>
+               </error>
+               <error code="1" pos="65" row="2" col="53" len="6">
+                  <word>Дарога</word>
+                  <s>Дорога</s>
+               </error>
+               <error code="1" pos="91" row="2" col="79" len="4">
+                  <word>рошь</word>
+                  <s>рожь</s>
+               </error>
+               <error code="1" pos="116" row="2" col="104" len="8">
+                  <word>занимаит</word>
+                  <s>занимает</s>
+               </error>
+               <error code="1" pos="130" row="2" col="118" len="9">
+                  <word>пробегаит</word>
+                  <s>пробегает</s>
+               </error>
+               <error code="1" pos="141" row="2" col="129" len="3">
+                  <word>мыш</word>
+                  <s>мышь</s>
+               </error>
+               <error code="1" pos="155" row="2" col="143" len="8">
+                  <word>слышется</word>
+                  <s>слышится</s>
+               </error>
+               <error code="1" pos="174" row="2" col="162" len="5">
+                  <word>птици</word>
+                  <s>птицы</s>
+               </error>
+               <error code="1" pos="187" row="2" col="175" len="4">
+                  <word>паёт</word>
+                  <s>поет</s>
+               </error>
+               <error code="1" pos="201" row="4" col="3" len="5">
+                  <word>Вечир</word>
+                  <s>Вечер</s>
+               </error>
+               <error code="1" pos="208" row="4" col="10" len="7">
+                  <word>Близица</word>
+                  <s>Близнеца</s>
+                  <s>Близится</s>
+                  <s>Блинница</s>
+               </error>
+               <error code="3" pos="248" row="4" col="50" len="3">
+                  <word>тиш</word>
+                  <s>Тиш</s>
+                  <s>тишь</s>
+               </error>
+               <error code="1" pos="260" row="4" col="62" len="11">
+                  <word>неунимаится</word>
+               </error>
+               <error code="1" pos="300" row="4" col="102" len="6">
+                  <word>биседу</word>
+                  <s>беседу</s>
+               </error>
+               <error code="1" pos="412" row="6" col="95" len="5">
+                  <word>мелоч</word>
+                  <s>мелочь</s>
+               </error>
+               <error code="1" pos="422" row="6" col="105" len="8">
+                  <word>гаварить</word>
+                  <s>говорить</s>
+               </error>
+               <error code="1" pos="536" row="6" col="219" len="8">
+                  <word>праводим</word>
+                  <s>проводим</s>
+               </error>
+            </SpellResult>
+         </ArrayOfSpellResult>
+      </CheckTextsResponse>
+   </soap:Body>
+</soap:Envelope>
+
+Запрос № 4.
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:spel="http://speller.yandex.net/services/spellservice">
+   <soap:Header/>
+   <soap:Body>
+      <spel:CheckTextsRequest lang="ru" options="0" format="">
+         <!--Zero or more repetitions:-->
+         <spel:text>Ежи.
+
+          Унас под крыльцом живут ежы. По вечерам вся семья выходит гулять. Взрослые ежи роют землю маленькими лапами. Они достают корешки и едят. Маленкие ежата в это время играют, резвяца.
+Аднажды к старому ежу подбежала сабака. Ёж свернулся вклубок и замер. Собака осторожно покатила ежа кпруду. Ёш плюхнулся в воду и поплыл. Я прогнал сабаку. На следующюю весну остался под крыльцом один старый ёжек. Куда девались остальные? Они переселились в другое место. Старый ёж незахотел покинуть мой дом.
+
+                                               </spel:text>
+      </spel:CheckTextsRequest>
+   </soap:Body>
+</soap:Envelope>
+
+Ответ № 4.
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <CheckTextsResponse xmlns="http://speller.yandex.net/services/spellservice">
+         <ArrayOfSpellResult>
+            <SpellResult>
+               <error code="1" pos="16" row="2" col="10" len="4">
+                  <word>Унас</word>
+                  <s>У нас</s>
+               </error>
+               <error code="1" pos="40" row="2" col="34" len="3">
+                  <word>ежы</word>
+                  <s>ежи</s>
+               </error>
+               <error code="1" pos="153" row="2" col="147" len="8">
+                  <word>Маленкие</word>
+                  <s>Маленькие</s>
+               </error>
+               <error code="1" pos="188" row="2" col="182" len="7">
+                  <word>резвяца</word>
+                  <s>резвятся</s>
+               </error>
+               <error code="1" pos="197" row="3" col="0" len="7">
+                  <word>Аднажды</word>
+                  <s>Однажды</s>
+               </error>
+               <error code="1" pos="229" row="3" col="32" len="6">
+                  <word>сабака</word>
+                  <s>собака</s>
+               </error>
+               <error code="1" pos="250" row="3" col="53" len="7">
+                  <word>вклубок</word>
+                  <s>в клубок</s>
+               </error>
+               <error code="1" pos="297" row="3" col="100" len="6">
+                  <word>кпруду</word>
+                  <s>к пруду</s>
+               </error>
+               <error code="1" pos="305" row="3" col="108" len="2">
+                  <word>Ёш</word>
+                  <s>Ешь</s>
+                  <s>Еж</s>
+                  <s>Кеш</s>
+                  <s>Е</s>
+                  <s>Аш</s>
+               </error>
+               <error code="1" pos="345" row="3" col="148" len="6">
+                  <word>сабаку</word>
+                  <s>собаку</s>
+               </error>
+               <error code="1" pos="356" row="3" col="159" len="9">
+                  <word>следующюю</word>
+                  <s>следующую</s>
+               </error>
+               <error code="1" pos="405" row="3" col="208" len="4">
+                  <word>ёжек</word>
+                  <s>Ежек</s>
+                  <s>ежик</s>
+               </error>
+               <error code="1" pos="479" row="3" col="282" len="9">
+                  <word>незахотел</word>
+                  <s>не захотел</s>
+               </error>
+            </SpellResult>
+         </ArrayOfSpellResult>
+      </CheckTextsResponse>
+   </soap:Body>
+</soap:Envelope>
+
+Запрос № 5.
+ 
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:spel="http://speller.yandex.net/services/spellservice">
+   <soap:Header/>
+   <soap:Body>
+      <spel:CheckTextsRequest lang="ru" options="0" format="">
+         <!--Zero or more repetitions:-->
+         <spel:text>Джульбарс.
+
+Надень рождения коле подорили маленького щенка. коля очень любил своего жжульбарса.
+
+Началась вайна. Тижело было расстаться с собакой, но коля сам отвёл своего любимца в школу служебных собак. джульбарса на  учили там находить мины.
+
+И вот первое задание. Отступая, враги заминировали лётное поле. Пашёл сильный дождь, потом у  дарил морос. Поле покрылось толстой коркой льда. Только сабака смогла обнаружить мины.
+
+Всю войну джульбарс верно служыл людям.
+                                               </spel:text>
+      </spel:CheckTextsRequest>
+   </soap:Body>
+</soap:Envelope>
+
+Ответ № 5.
+
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Body>
+      <CheckTextsResponse xmlns="http://speller.yandex.net/services/spellservice">
+         <ArrayOfSpellResult>
+            <SpellResult>
+               <error code="1" pos="33" row="2" col="21" len="8">
+                  <word>подорили</word>
+                  <s>подарили</s>
+               </error>
+               <error code="1" pos="84" row="2" col="72" len="10">
+                  <word>жжульбарса</word>
+                  <s>Джульбарса</s>
+               </error>
+               <error code="1" pos="106" row="4" col="9" len="5">
+                  <word>вайна</word>
+                  <s>война</s>
+               </error>
+               <error code="1" pos="113" row="4" col="16" len="6">
+                  <word>Тижело</word>
+                  <s>Тяжело</s>
+               </error>
+               <error code="3" pos="205" row="4" col="108" len="10">
+                  <word>джульбарса</word>
+                  <s>Джульбарса</s>
+               </error>
+               <error code="1" pos="310" row="6" col="64" len="5">
+                  <word>Пашёл</word>
+                  <s>Пошел</s>
+               </error>
+               <error code="1" pos="346" row="6" col="100" len="5">
+                  <word>морос</word>
+                  <s>мороз</s>
+               </error>
+               <error code="1" pos="396" row="6" col="150" len="6">
+                  <word>сабака</word>
+                  <s>собака</s>
+               </error>
+               <error code="3" pos="438" row="8" col="10" len="9">
+                  <word>джульбарс</word>
+                  <s>Джульбарс</s>
+               </error>
+               <error code="1" pos="454" row="8" col="26" len="6">
+                  <word>служыл</word>
+                  <s>служил</s>
+               </error>
+            </SpellResult>
+         </ArrayOfSpellResult>
+      </CheckTextsResponse>
+   </soap:Body>
+</soap:Envelope>
 
