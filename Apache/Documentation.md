@@ -14,3 +14,4 @@
     - [ ]  статус-код == 200;
     - [ ]  в теле ответа значение поля `json.user` == 'jmeter'.
    -  Команда для запуска теста в режиме non-CUI :   jmeter -n -t HW7.jmx -l logfile_ver.txt -e -o web -Jvu=4 -Jloop=2 -Jramp-up=1
+- Ссылка на файл [Apache](https://github.com/VeronikaKonovalova/VerTesting/blob/main/Apache/ApacheJMeter.jmx).
