@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "c50fdbc1-f1f1-41e7-ac6e-81c93f5d8d7d",
+		"name": "TuDu list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27682228"
+	},
+	"item": [
+		{
+			"name": "Просмотр списка задач",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TuDuURL}}",
+					"host": [
+						"{{TuDuURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заглушка список задач",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заглушка список задач empty",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "result",
+						"value": "empty list",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление задачи",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"4 домашка\",\"completed\":false}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TuDuURL}}",
+					"host": [
+						"{{TuDuURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заглушка Добавление задачи",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"4 домашка\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заглушка Добавление задачи Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"ошибка\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр списка задач обновленный",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TuDuURL}}",
+					"host": [
+						"{{TuDuURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Задача выполнена",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"completed\":true}"
+				},
+				"url": {
+					"raw": "{{TuDuURL}}81642",
+					"host": [
+						"{{TuDuURL}}81642"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр списка задач обновленный",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TuDuURL}}",
+					"host": [
+						"{{TuDuURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление задачи",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"113\", \"Chromium\";v=\"113\", \"Not-A.Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"url": {
+					"raw": "{{TuDuURL}}81642",
+					"host": [
+						"{{TuDuURL}}81642"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Просмотр списка задач обновленный",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TuDuURL}}",
+					"host": [
+						"{{TuDuURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TuDuURL",
+			"value": "https://todo-app-sky.herokuapp.com/",
+			"type": "string"
+		}
+	]
+}

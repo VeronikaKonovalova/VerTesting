@@ -1,0 +1,160 @@
+{
+  "uuid": "0ba07939-005f-4189-9cad-ff4bae4c3eb3",
+  "lastMigration": 27,
+  "name": "TUDU",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "423affdc-6b4e-49f6-84c1-ea728b88ac1b",
+      "type": "http",
+      "documentation": "list",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "a17e9bda-acfd-4922-9a66-a4b1a6a1fe31",
+          "body": "[{\"id\":1,\"title\":\"test1\",\"completed\":false,\"order\":null,\"url\":\"/1\"},\r\n{\"id\":2,\"title\":\"test2\",\"completed\":false,\"order\":null,\"url\":\"/2\"},\r\n{\"id\":3,\"title\":\"test3\",\"completed\":false,\"order\":null,\"url\":\"/3\"},\r\n{\"id\":4,\"title\":\"test4\",\"completed\":true,\"order\":null,\"url\":\"/4\"}]\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Test get list",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "0f161cb5-898f-47bd-aec3-f3b07308c22b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "empty list",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "result",
+              "value": "empty list",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "9cda6c25-ac3f-498e-9714-816a396b2c2b",
+      "type": "http",
+      "documentation": "add",
+      "method": "post",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "c9fb31d3-842e-46f6-9059-6da0ebaa209b",
+          "body": "{\r\n    \"id\": {{faker 'datatype.uuid'}},\r\n    \"title\": \"4 домашка\",\r\n    \"completed\": false,\r\n    \"order\": null,\r\n    \"url\": \"/81749\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "023f8927-d854-45e9-a57a-34ac83691435",
+          "body": "{\"Недопустимое имя\"}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "title",
+              "value": "ошибка",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "423affdc-6b4e-49f6-84c1-ea728b88ac1b"
+    },
+    {
+      "type": "route",
+      "uuid": "9cda6c25-ac3f-498e-9714-816a396b2c2b"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
